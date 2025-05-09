@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  header {
+    text-align: center;
+    padding: 3rem 1rem;
+    animation: fadeIn 2s ease;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #00fff0, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .intro {
+    text-align: center;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #d1d1e9;
+    animation: slideUp 1.5s ease;
+  }
+  
+  .scifi-zone {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  
+  .scifi-object {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border: 4px solid #00fff0;
+    border-radius: 50%;
+    animation: rotate 6s linear infinite;
+    box-shadow: 0 0 25px #00fff0, 0 0 60px #ff00ff inset;
+  }
+  
+  .effect-text {
+    font-size: 1.1rem;
+    color: #00fff0;
+  }
+  
+  .science-section {
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .science-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00fff0;
+    margin-bottom: 2rem;
+  }
+  
+  .scientist-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: #1e1e2f;
+    border: 2px solid #444;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #00fff0;
+  }
+  
+  .card h3 {
+    color: #00fff0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-details {
+    display: none;
+    margin-top: 0.5rem;
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  /* Animations */
+  @keyframes glow {
+    0% { text-shadow: 0 0 10px #00fff0, 0 0 20px #ff00ff; }
+    100% { text-shadow: 0 0 20px #00fff0, 0 0 30px #ff00ff; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Starfield */
+  .stars {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+  
